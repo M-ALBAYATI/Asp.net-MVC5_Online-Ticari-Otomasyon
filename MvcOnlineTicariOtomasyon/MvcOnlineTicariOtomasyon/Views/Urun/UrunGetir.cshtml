@@ -26,7 +26,6 @@
     <br />
     @Html.LabelFor(x => x.Kategori.KategoriID)
     @Html.DropDownListFor(x => x.Kategoriid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
-    @*@Html.TextBoxFor(x => x.Kategoriid, new { @class = "form-control" })*@
     <br />
     @Html.LabelFor(x => x.UrunGorsel)
     @Html.TextBoxFor(x => x.UrunGorsel, new { @class = "form-control" })
@@ -34,5 +33,5 @@
     @Html.LabelFor(x => x.Durum)
     @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
     <br />
-    <button class="btn btn-warning">Güncelle</button>
+    <button class="btn btn-success">Güncelle</button>
 }

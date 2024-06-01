@@ -16,12 +16,8 @@
     @foreach (var k in Model)
     {
         <tr>
-            <td>
-                @k.Departmanid
-            </td>
-            <td>
-                @k.DepartmanAd
-            </td>
+            <td> @k.Departmanid</td>
+            <td> @k.DepartmanAd</td>
             <td><a href="/Departman/DepartmanSil/@k.Departmanid" class="btn btn-danger">Sil</a></td>
             <td><a href="/Departman/DepartmanGetir/@k.Departmanid" class="btn btn-warning">Güncelle</a></td>
             <td><a href="/Departman/DepartmanDetay/@k.Departmanid" class="btn btn-primary">Detaylar</a></td>
@@ -29,5 +25,5 @@
     }
 
 </table>
-<a href="/Departman/DepartmanEkle" class="btn btn-info">Departman Ekle</a>
+<a href="/Departman/DepartmanEkle" class="btn btn-info">Personel Ekle</a>
 
