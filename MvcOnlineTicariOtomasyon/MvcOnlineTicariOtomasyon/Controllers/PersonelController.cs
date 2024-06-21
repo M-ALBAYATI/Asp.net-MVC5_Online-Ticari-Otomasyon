@@ -10,10 +10,10 @@ namespace MvcOnlineTicariOtomasyon.Controllers
     public class PersonelController : Controller
     {
         // GET: Personel
-        Context c=new Context();
+        Context c = new Context();
         public ActionResult Index()
         {
-            var degerler=c.Personels.ToList();
+            var degerler = c.Personels.ToList();
             return View(degerler);
         }
 
@@ -54,7 +54,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         public ActionResult PersonelGuncelle(Personel p)
         {
             var prsn = c.Personels.Find(p.Personelid);
-          prsn.PersonelAd = p.PersonelAd;
+            prsn.PersonelAd = p.PersonelAd;
             prsn.PersonelSoyad = p.PersonelSoyad;
             prsn.PersonelGorsel = p.PersonelGorsel;
             prsn.Departmanid = p.Departmanid;
@@ -64,8 +64,14 @@ namespace MvcOnlineTicariOtomasyon.Controllers
 
         public ActionResult SatisDetay(int id)
         {
-            var degerler = c.SatisHarekets.Where(x=>x.Satisid==id).ToList();
+            var degerler = c.SatisHarekets.Where(x => x.Satisid == id).ToList();
             return View(degerler);
+        }
+
+        public ActionResult PersonelListe()
+        {
+            var sorgu = c.Personels.ToList();
+            return View(sorgu);
         }
     }
 }
