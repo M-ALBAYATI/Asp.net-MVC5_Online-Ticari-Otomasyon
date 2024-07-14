@@ -18,13 +18,13 @@
     @foreach (var k in Model)
     {
         <tr>
-            <td>@k.Personelid</td>
-            <td>@k.PersonelAd</td>
-            <td>@k.PersonelSoyad</td>
-            <td>@k.PersonelGorsel</td>
-            <td>@k.Departman.DepartmanAd</td>
-            <td><a href="/Personel/PersonelGetir/@k.Personelid" class="btn btn-warning">Güncelle</a></td>
-            <td><a href="/Departman/DepartmanPersonelSatis/@k.Personelid" class="btn btn-primary">Detaylar</a></td>
+            <td style="vertical-align: middle;">@k.Personelid</td>
+            <td style="vertical-align: middle;">@k.PersonelAd</td>
+            <td style="vertical-align: middle;">@k.PersonelSoyad</td>
+            <td style="text-align: center; vertical-align: middle;"><img src="@k.PersonelGorsel" style="width:100px;height:75px;" /></td>
+            <td style="text-align: center; vertical-align: middle;">@k.Departman.DepartmanAd</td>
+            <td style="text-align: center; vertical-align: middle;"><a href="/Personel/PersonelGetir/@k.Personelid" class="btn btn-warning">Güncelle</a></td>
+            <td style="text-align: center; vertical-align: middle;"><a href="/Departman/DepartmanPersonelSatis/@k.Personelid" class="btn btn-primary">Detaylar</a></td>
         </tr>
     }
 
