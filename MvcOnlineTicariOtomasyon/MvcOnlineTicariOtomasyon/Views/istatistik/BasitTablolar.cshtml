@@ -10,20 +10,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Simple Tables</title>
-    <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="~/AdminLTE-3.0.4/dist/css/adminlte.min.css">
-    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">->
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/dist/css/adminlte.min.css">>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-        <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
@@ -31,10 +25,9 @@
                         <h1>Hızlı Bakış Tabloları</h1>
                     </div>
                 </div>
-            </div><!-- /.container-fluid -->
+            </div>
         </section>
 
-        <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -43,7 +36,6 @@
                             <div class="card-header">
                                 <h3 class="card-title">Kategori Tablosu</h3>
                             </div>
-                            <!-- /.card-header -->
                             <div class="card-body">
                                 <table class="table table-bordered">
                                     <thead>
@@ -98,13 +90,13 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <!-- /.card-body -->
+                       
                         </div>
-                        <!-- /.card -->
+
                         @Html.Action("Partial1", "istatistik")
-                        <!-- /.card -->
+
                     </div>
-                    <!-- /.col -->
+              
                     <div class="col-md-6">
                         <div class="card">
                             <div class="card-header">
@@ -114,7 +106,7 @@
 
                                 </div>
                             </div>
-                            <!-- /.card-header -->
+    
                             <div class="card-body p-0">
                                 <table class="table">
                                     <thead>
@@ -171,38 +163,36 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <!-- /.card-body -->
+
                         </div>
-                        <!-- /.card -->
+   
                         @Html.Action("Partial4", "istatistik")
-                        <!-- /.card -->
+
                     </div>
-                    <!-- /.col -->
+
                 </div>
-                <!-- /.row -->
+
                 <div class="row">
                     @Html.Action("Partial2", "istatistik")
                 </div>
-                <!-- /.row -->
+    
                 @Html.Action("Partial3", "istatistik")
-                <!-- /.row -->
-            </div><!-- /.container-fluid -->
+      
+            </div>
         </section>
-        <!-- /.content -->
+
     </div>
-    <!-- /.content-wrapper -->
-    <!-- Control Sidebar -->
+
     <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
+ 
     </aside>
-    <!-- /.control-sidebar -->
-    <!-- jQuery -->
+  
     <script src="../../plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
+  
     <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- AdminLTE App -->
+
     <script src="../../dist/js/adminlte.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
+ 
     <script src="../../dist/js/demo.js"></script>
 </body>
 </html>
