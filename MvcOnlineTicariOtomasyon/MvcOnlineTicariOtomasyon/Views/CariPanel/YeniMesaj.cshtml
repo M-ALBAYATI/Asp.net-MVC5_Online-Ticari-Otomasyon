@@ -1,0 +1,96 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Mesajlar
+@{
+    ViewBag.Title = "Yeni Mesaj";
+    Layout = "~/Views/Shared/_CariLayout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Yeni Mesaj Oluştur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/summernote/summernote-bs4.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini">
+    <section class="content-header">
+        <div class="container-fluid">
+            <h1>Yeni Mesaj Oluştur</h1>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="/CariPanel/GelenMesajlar/" class="btn btn-primary btn-block mb-3">Gelen Kutusu</a>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Klasörler</h3>
+                        </div>
+                        <div class="card-body p-0">
+                            <ul class="nav nav-pills flex-column">
+                                <li class="nav-item active">
+                                    <a href="/CariPanel/GelenMesajlar/" class="nav-link">
+                                        <i class="fas fa-inbox"></i> Gelen Kutusu
+                                        <span class="badge bg-primary float-right">@ViewBag.gelenSayi</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/CariPanel/GidenMesajlar/" class="nav-link">
+                                        <i class="far fa-envelope"></i> Gönderdiğim Mesajlar
+                                        <span class="badge bg-gradient-olive float-right">@ViewBag.gidenSayi</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="card card-primary card-outline">
+                        <div class="card-header">
+                            <h3 class="card-title">Mesaj Yaz</h3>
+                        </div>
+
+                        <form method="post" class="form-group">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <input class="form-control" name="Alici" placeholder="Kime:">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="Konu" placeholder="Konu:">
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="compose-textarea" name="Icerik" class="form-control" style="height: 300px"></textarea>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <button type="submit" class="btn btn-primary"><i class="far fa-envelope"></i> Gönder</button>
+                                </div>
+                                <button type="reset" class="btn btn-default"><i class="fas fa-times"></i> Vazgeç</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+    <script src="~/AdminLTE-3.0.4/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/AdminLTE-3.0.4/dist/js/adminlte.min.js"></script>
+    <script src="~/AdminLTE-3.0.4/plugins/summernote/summernote-bs4.min.js"></script>
+    <script>
+        $(function () {
+            $('#compose-textarea').summernote()
+        });
+    </script>
+</body>
+</html>
