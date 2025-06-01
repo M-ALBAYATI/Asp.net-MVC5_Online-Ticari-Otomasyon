@@ -1,0 +1,68 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Class3
+@{
+    ViewBag.Title = "Dinamik";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="panel-title" style="margin-left:10px;">
+                    <strong>Fatura & Kalem İşlemler Detayı</strong>
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    @* Fatura Listesi *@
+    @foreach (var item in Model.Deger1)
+    {
+        <div class="panel-body">
+            <table class="table table-striped table-responsive">
+                <tbody>
+                    <tr>
+                        <td><strong>Seri-Sıra No:</strong> @item.FaturaSeriNo - @item.FaturaSıraNo</td>
+                        <td><strong>Cari:</strong> @item.TeslimEden</td>
+                        <td><strong>Tarih:</strong> @item.Tarih.ToShortDateString()</td>
+                        <td><strong>Vergi Dairesi:</strong> @item.VergiDairesi</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Açıklama</th>
+                                        <th>Miktar</th>
+                                        <th>Birim Fiyat</th>
+                                        <th>Tutar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        decimal totalBill = 0;
+                                    }
+                                    @foreach (var order in item.FaturaKalems)
+                                    {
+                                        <tr>
+                                            <td>@order.Aciklama</td>
+                                            <td>@order.Miktar</td>
+                                            <td>@order.BirimFiyat ₺</td>
+                                            <td>@order.Tutar ₺</td>
+                                        </tr>
+                                        totalBill += order.Tutar;
+                                    }
+                                    <tr>
+                                        <td colspan="3" class="text-right"><strong>Fatura Toplam Tutar:</strong></td>
+                                        <td><strong>@totalBill ₺</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+

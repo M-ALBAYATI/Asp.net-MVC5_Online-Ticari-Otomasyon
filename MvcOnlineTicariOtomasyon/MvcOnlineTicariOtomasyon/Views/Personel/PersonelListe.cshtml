@@ -2,7 +2,7 @@
 @model List<Personel>
 
 @{
-    ViewBag.Title = "PersonelListe";
+    ViewBag.Title = "PersonelListesi";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
@@ -12,16 +12,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Personeller</title>
->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
-
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-
     <link rel="stylesheet" href="~/AdminLTE-3.0.4/dist/css/adminlte.min.css">
-
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini">
@@ -38,10 +33,7 @@
             </div>
         </section>
 
-
         <section class="content">
-
-
             <div class="card card-solid">
                 <div class="card-body pb-0">
                     <div class="row d-flex align-items-stretch">
@@ -50,16 +42,16 @@
                             <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                                 <div class="card bg-light">
                                     <div class="card-header text-muted border-bottom-0">
-                                        Digital Strategist
+                                        Dijital Stratejist
                                     </div>
                                     <div class="card-body pt-0">
                                         <div class="row">
                                             <div class="col-7">
                                                 <h2 class="lead"><b>@x.PersonelAd @x.PersonelSoyad</b></h2>
-                                                <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                                <p class="text-muted text-sm"><b>Hakkında: </b> Web Tasarımcısı / UX / Grafik Sanatçısı / Kahve Sever </p>
                                                 <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: Demo Street 123, Demo City 04312, NJ</li>
-                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: + 800 - 12 12 23 52</li>
+                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Adres: Demo Sokak 123, Demo Şehir 04312, NJ</li>
+                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefon: + 800 - 12 12 23 52</li>
                                                 </ul>
                                             </div>
                                             <div class="col-5 text-center">
@@ -69,10 +61,10 @@
                                     </div>
                                     <div class="card-footer">
                                         <div class="text-right">
-                                            <a href="/Personel/PersonelGetir/@x.Personelid" class="btn btn-sm bg-teal">
+                                            <a href="/personel/personelgetir/@x.Personelid" class="btn btn-sm bg-teal">
                                                 <i class="fas fa-comments"></i>
                                             </a>
-                                            <a href="/Departman/DepartmanPersonelSatis/@x.Personelid" class="btn btn-sm btn-primary">
+                                            <a href="/departman/departmanpersonelsatis/@x.Personelid" class="btn btn-sm btn-primary">
                                                 <i class="fas fa-user"></i> Satış Geçmişi
                                             </a>
                                         </div>
@@ -83,22 +75,16 @@
                     </div>
                 </div>
             </div>
-   
         </section>
 
     </div>
 
     <aside class="control-sidebar control-sidebar-dark">
-
     </aside>
 
-
     <script src="../../plugins/jquery/jquery.min.js"></script>
-
     <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
     <script src="../../dist/js/adminlte.min.js"></script>
-
     <script src="../../dist/js/demo.js"></script>
 </body>
 </html>

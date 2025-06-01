@@ -12,7 +12,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
     {
         // GET: CariPanel
         Context c = new Context();
-        [Authorize]
         public ActionResult Index()
         {
             var mail = (string)Session["CariMail"];
@@ -37,7 +36,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return View(mesajlar);
         }
 
-        [Authorize]
         public ActionResult Siparislerim()
         {
             var mail = (string)Session["CariMail"];
@@ -47,7 +45,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return View(degerler);
         }
 
-        [Authorize]
         public ActionResult GelenMesajlar()
         {
             var mail = (string)Session["CariMail"];
@@ -62,7 +59,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return View(mesajlar);
         }
 
-        [Authorize]
         public ActionResult GidenMesajlar()
         {
             var mail = (string)Session["CariMail"];
@@ -77,7 +73,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return View(mesajlar);
         }
 
-        [Authorize]
         public ActionResult MesajDetay(int id)
         {
             var mesajlar = c.Mesajlars.Where(x => x.MesajID == id).ToList();
@@ -91,7 +86,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return View(mesajlar);
         }
 
-        [Authorize]
         [HttpGet]
         public ActionResult YeniMesaj()
         {
@@ -104,7 +98,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return View();
         }
 
-        [Authorize]
         [HttpPost]
         public ActionResult YeniMesaj(Mesajlar m)
         {
@@ -116,7 +109,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return View();
         }
 
-        [Authorize]
         public ActionResult KargoTakip(string p)
         {
             var k = from x in c.KargoDetays select x;
@@ -124,7 +116,6 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             return View(k.ToList());
         }
 
-        [Authorize]
         public ActionResult CariKargoTakip(string id)
         {
             var degerler = c.KargoTakips.Where(x => x.TakipKodu == id).ToList();
